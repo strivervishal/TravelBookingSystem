@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: "http://localhost:5000/graphql", // Ensure backend is running
+  uri: "https://travel-booking-system-mct8.vercel.app/graphql", // Ensure backend is running
   cache: new InMemoryCache(),
 });
 

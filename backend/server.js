@@ -9,7 +9,12 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: "https://travel-booking-system-rose.vercel.app/", // Allow localhost for development
+  methods: ["GET", "POST"], // Allowed methods
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // GraphQL Endpoint
